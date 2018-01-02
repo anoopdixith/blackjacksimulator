@@ -44,6 +44,10 @@ public class BlackJackEntity {
         this.matchUnsuited21Allowed = matchUnsuited21Allowed;
     }
 
+    public BlackJackEntity(int numberOfDecks) {
+        this.numberOfDecks = numberOfDecks;
+    }
+
     public int getNumberOfDecks() {
         return numberOfDecks;
     }

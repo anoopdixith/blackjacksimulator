@@ -16,7 +16,7 @@ public class Play {
     static List<Integer> decisiveGameNumberForBankruptcyQuit = new ArrayList<>();
 
     public static void main(String a[]) {
-        int visits = 100;
+        int visits = 10;
         for(int v=0; v < visits; v++) {
             new Play().initPlay();
         }
@@ -37,14 +37,14 @@ public class Play {
 
     public void initPlay() {
         int numberOfPlayers = 0;
-        int numberOfGames = 1000;
+        int numberOfGames = 5000;
         housePlayer = House.getInstance().getHousePlayer();
         BlackJackEntity blackJackEntity = new BlackJackEntity();
         Table table = new Table(blackJackEntity);
         List<Player> playersForThisTable = Utils.getPlayers(numberOfPlayers);
         // Simulate myself
         Player anoop = new Player(1000);
-        anoop.setPlayerTypeQuitStrategy(1.5);
+        anoop.setPlayerTypeQuitStrategy(2);
         anoop.setPlayerTypeBettingStrategy(MARTINGALE_BET);
         playersForThisTable.add(anoop);
 

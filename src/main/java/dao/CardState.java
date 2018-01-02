@@ -29,7 +29,7 @@ public class CardState {
     private List<Card> getFreshShuffle(int numberOfDecks) {
         List<Card> allCards = new ArrayList<Card>();
         while(numberOfDecks-- > 0) {
-            for(int value=1; value <= 10; value++) {
+            for(int value=2; value <= 10; value++) {
                 for(int symbol=1; symbol <= 4; symbol++) {
                     Card c = new Card(value, symbol, null);
                     allCards.add(c);

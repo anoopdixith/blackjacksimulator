@@ -137,7 +137,7 @@ public class Player {
                 if(currentHoldings >= initialInvestment) {
                     bet = 25;
                 }
-                else if(currentHoldings < initialInvestment) {
+                else {
                     bet = currentHoldings <= 0? -1 :
                             (initialInvestment - currentHoldings);
                 }
